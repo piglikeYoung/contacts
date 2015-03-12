@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NJContatc : NSObject
+@interface NJContatc : NSObject <NSCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *phoneNumber;

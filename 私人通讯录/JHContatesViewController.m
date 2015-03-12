@@ -12,6 +12,8 @@
 #import "JHEditViewController.h"
 #import "JHTableViewCell.h"
 
+#define NJContactsPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"contacts.arc"]
+
 @interface JHContatesViewController ()<UIActionSheetDelegate,JHAddViewControllerDelegate,JHEditViewControllerDelegate>
 
 /** 点击注销按钮 */
@@ -85,6 +87,9 @@
     //    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     //    self.contatcs[path.row] = cpmtatc;
     
+    [NSKeyedArchiver archiveRootObject:self.contatcs toFile:NJContactsPath];
+    
+    
     // 2.刷新表格
     [self.tableView reloadData];
 }
@@ -94,14 +99,24 @@
 {
     // 1.保存数据到数组中
     [self.contatcs addObject:contatc];
+    
+    // 在这个地方保存用户添加的所有的联系人信息
+    [NSKeyedArchiver archiveRootObject:self.contatcs toFile:NJContactsPath];
+    
+    
     // 2.刷新表格
     [self.tableView reloadData];
 }
 
 -(NSMutableArray *)contatcs
 {
+    // 从文件中读取数组
+    // 如果第一次启动没有文件,就创建一个空的数组用于保存数据
     if (_contatcs == nil) {
-        _contatcs = [NSMutableArray array];
+        _contatcs = [NSKeyedUnarchiver unarchiveObjectWithFile:NJContactsPath];
+        if (_contatcs == nil) {
+            _contatcs = [NSMutableArray array];
+        }
     }
     
     return _contatcs;

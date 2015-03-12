@@ -10,4 +10,19 @@
 
 @implementation NJContatc
 
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.phoneNumber forKey:@"number"];
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init]) {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.phoneNumber = [aDecoder decodeObjectForKey:@"number"];
+    }
+    return self;
+}
+
 @end

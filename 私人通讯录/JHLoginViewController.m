@@ -84,10 +84,6 @@
         [self loginOnClick:nil];
     }
     
-    NSString *doc =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    
-    NSLog(@"%@",doc);
-
 }
 
 -(void)textChange
@@ -119,7 +115,7 @@
     // 添加蒙版禁止用户操作，并且提示用户正在登录
     [MBProgressHUD showMessage:@"正在拼命加载ing...."];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         /*
          // 1.判断账号密码是否正确(lnj/123)
@@ -171,6 +167,7 @@
         [defaults synchronize];
 
     });
+    
 }
 
 
