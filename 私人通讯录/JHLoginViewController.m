@@ -7,7 +7,7 @@
 //
 
 #import "JHLoginViewController.h"
-#import "MBProgressHUD+JH.h"
+#import "MBProgressHUD+NJ.h"
 
 #define NJAccount @"account"
 #define NJPwd @"pwd"
@@ -80,6 +80,7 @@
     //    BOOL isAutoLogin = [defaults boolForKey:NJAutoLogin];
     [self.autoLoginSwitch setOn:[defaults boolForKey:NJAutoLogin] animated:YES];
     if (self.autoLoginSwitch.isOn) {
+        
         // 自动登录相当于调用登录方法
         [self loginOnClick:nil];
     }
@@ -112,51 +113,28 @@
 
 - (IBAction)loginOnClick:(id)sender {
     
-    // 添加蒙版禁止用户操作，并且提示用户正在登录
+    // 添加蒙版禁止用户操作, 并且提示用户正在登录
     [MBProgressHUD showMessage:@"正在拼命加载ing...."];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        /*
-         // 1.判断账号密码是否正确(lnj/123)
-         if ([self.accountField.text isEqualToString:@"lnj"] &&
-         [self.pwdField.text isEqualToString:@"123"]) {
-         // 2.如果正如,跳转到联系人界面(手动执行segue)
-         [self performSegueWithIdentifier:@"login2contatc" sender:nil];
-         
-         // 3.登录成功后移除蒙版
-         [MBProgressHUD hideHUD];
-         }else
-         {
-         
-         
-         
-         // [MBProgressHUD showError:@"用户名或者密码不正确!!!"];
-         }
-         */
-        
-        
-        
-        
-        
-        if (![self.accountField.text isEqualToString:@"yjh"]) {
-            // 移除蒙版
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (![self.accountField.text isEqualToString:@"lnj"]) {
+            // 3.登录成功后移除蒙版
             [MBProgressHUD hideHUD];
-            [MBProgressHUD showError:@"用户名不正确!!"];
-            return ;
+            [MBProgressHUD showError:@"用户名不正确!!!"];
+            return;
         }
         
         if (![self.pwdField.text isEqualToString:@"123"]) {
-            // 移除蒙版
+            // 3.登录成功后移除蒙版
             [MBProgressHUD hideHUD];
-            [MBProgressHUD showError:@"密码不正确!!"];
-            return ;
+            [MBProgressHUD showError:@"密码不正确!!!"];
+            return;
         }
         
-        // 登录成功后移除蒙版
+        // 3.登录成功后移除蒙版
         [MBProgressHUD hideHUD];
-        // 如果正确,跳转到联系人界面(手动执行segue)
-        [self performSegueWithIdentifier:@"login2contatc" sender:nil];
+        // 4.如果正如,跳转到联系人界面(手动执行segue)
+        [self performSegueWithIdentifier:@"login2contatc" sender:@"jonathan"];
         
         // 5.保存用户数据
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -165,8 +143,9 @@
         [defaults setBool:self.remPwdSwitch.isOn forKey:NJRemPwd];
         [defaults setBool:self.autoLoginSwitch.isOn forKey:NJAutoLogin];
         [defaults synchronize];
-
+        
     });
+
     
 }
 

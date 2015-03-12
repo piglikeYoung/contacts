@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2119781AB1781D00A1E9D9 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2119741AB1781D00A1E9D9 /* MBProgressHUD+NJ.m */; };
+		7D2119791AB1781D00A1E9D9 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D2119751AB1781D00A1E9D9 /* MBProgressHUD.bundle */; };
+		7D21197A1AB1781D00A1E9D9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2119771AB1781D00A1E9D9 /* MBProgressHUD.m */; };
 		7DC2DDC51AAFC18D00EE84B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDC41AAFC18D00EE84B0 /* main.m */; };
 		7DC2DDC81AAFC18D00EE84B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDC71AAFC18D00EE84B0 /* AppDelegate.m */; };
 		7DC2DDCB1AAFC18D00EE84B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDCA1AAFC18D00EE84B0 /* ViewController.m */; };
@@ -18,8 +21,6 @@
 		7DC2DDF01AAFC2D700EE84B0 /* JHAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDEF1AAFC2D700EE84B0 /* JHAddViewController.m */; };
 		7DC2DDF31AAFC2EA00EE84B0 /* JHEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDF21AAFC2EA00EE84B0 /* JHEditViewController.m */; };
 		7DC2DDF61AAFC32700EE84B0 /* JHContatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDF51AAFC32700EE84B0 /* JHContatesViewController.m */; };
-		7DC2DDFA1AAFE0EA00EE84B0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDF91AAFE0EA00EE84B0 /* MBProgressHUD.m */; };
-		7DC2DDFD1AAFE12700EE84B0 /* MBProgressHUD+JH.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDFC1AAFE12700EE84B0 /* MBProgressHUD+JH.m */; };
 		7DC2DE001AAFFBAD00EE84B0 /* NJContatc.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2DDFF1AAFFBAD00EE84B0 /* NJContatc.m */; };
 		7DC5F8FA1AB05970004F07D3 /* JHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC5F8F91AB05970004F07D3 /* JHTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D2119731AB1781D00A1E9D9 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
+		7D2119741AB1781D00A1E9D9 /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
+		7D2119751AB1781D00A1E9D9 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		7D2119761AB1781D00A1E9D9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		7D2119771AB1781D00A1E9D9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		7D21197B1AB17F1100A1E9D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		7D21197C1AB17F1100A1E9D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		7DC2DDBF1AAFC18D00EE84B0 /* 私人通讯录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "私人通讯录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC2DDC31AAFC18D00EE84B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DC2DDC41AAFC18D00EE84B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,10 +64,6 @@
 		7DC2DDF21AAFC2EA00EE84B0 /* JHEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHEditViewController.m; sourceTree = "<group>"; };
 		7DC2DDF41AAFC32700EE84B0 /* JHContatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHContatesViewController.h; sourceTree = "<group>"; };
 		7DC2DDF51AAFC32700EE84B0 /* JHContatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHContatesViewController.m; sourceTree = "<group>"; };
-		7DC2DDF81AAFE0EA00EE84B0 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		7DC2DDF91AAFE0EA00EE84B0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		7DC2DDFB1AAFE12700EE84B0 /* MBProgressHUD+JH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JH.h"; sourceTree = "<group>"; };
-		7DC2DDFC1AAFE12700EE84B0 /* MBProgressHUD+JH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JH.m"; sourceTree = "<group>"; };
 		7DC2DDFE1AAFFBAD00EE84B0 /* NJContatc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJContatc.h; sourceTree = "<group>"; };
 		7DC2DDFF1AAFFBAD00EE84B0 /* NJContatc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJContatc.m; sourceTree = "<group>"; };
 		7DC5F8F81AB05970004F07D3 /* JHTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTableViewCell.h; sourceTree = "<group>"; };
@@ -84,6 +88,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2119721AB1781D00A1E9D9 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7D2119731AB1781D00A1E9D9 /* MBProgressHUD+NJ.h */,
+				7D2119741AB1781D00A1E9D9 /* MBProgressHUD+NJ.m */,
+				7D2119751AB1781D00A1E9D9 /* MBProgressHUD.bundle */,
+				7D2119761AB1781D00A1E9D9 /* MBProgressHUD.h */,
+				7D2119771AB1781D00A1E9D9 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		7DC2DDB61AAFC18D00EE84B0 = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +121,7 @@
 		7DC2DDC11AAFC18D00EE84B0 /* 私人通讯录 */ = {
 			isa = PBXGroup;
 			children = (
-				7DC2DDF71AAFE09C00EE84B0 /* MBProgressHUD */,
+				7D2119721AB1781D00A1E9D9 /* MBProgressHUD */,
 				7DC2DDEA1AAFC28A00EE84B0 /* Other */,
 				7DC2DDE91AAFC27F00EE84B0 /* Controller */,
 				7DC2DDE81AAFC27600EE84B0 /* Model */,
@@ -178,17 +194,6 @@
 				7DC2DDC71AAFC18D00EE84B0 /* AppDelegate.m */,
 			);
 			name = Other;
-			sourceTree = "<group>";
-		};
-		7DC2DDF71AAFE09C00EE84B0 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				7DC2DDF81AAFE0EA00EE84B0 /* MBProgressHUD.h */,
-				7DC2DDF91AAFE0EA00EE84B0 /* MBProgressHUD.m */,
-				7DC2DDFB1AAFE12700EE84B0 /* MBProgressHUD+JH.h */,
-				7DC2DDFC1AAFE12700EE84B0 /* MBProgressHUD+JH.m */,
-			);
-			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DC2DDCE1AAFC18D00EE84B0 /* Main.storyboard in Resources */,
+				7D2119791AB1781D00A1E9D9 /* MBProgressHUD.bundle in Resources */,
 				7DC2DDD31AAFC18D00EE84B0 /* LaunchScreen.xib in Resources */,
 				7DC2DDD01AAFC18D00EE84B0 /* Images.xcassets in Resources */,
 			);
@@ -292,16 +298,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DC2DDED1AAFC2BE00EE84B0 /* JHLoginViewController.m in Sources */,
+				7D2119781AB1781D00A1E9D9 /* MBProgressHUD+NJ.m in Sources */,
 				7DC2DDCB1AAFC18D00EE84B0 /* ViewController.m in Sources */,
 				7DC2DDF31AAFC2EA00EE84B0 /* JHEditViewController.m in Sources */,
+				7D21197A1AB1781D00A1E9D9 /* MBProgressHUD.m in Sources */,
 				7DC5F8FA1AB05970004F07D3 /* JHTableViewCell.m in Sources */,
 				7DC2DDC81AAFC18D00EE84B0 /* AppDelegate.m in Sources */,
 				7DC2DDF01AAFC2D700EE84B0 /* JHAddViewController.m in Sources */,
-				7DC2DDFD1AAFE12700EE84B0 /* MBProgressHUD+JH.m in Sources */,
 				7DC2DE001AAFFBAD00EE84B0 /* NJContatc.m in Sources */,
 				7DC2DDC51AAFC18D00EE84B0 /* main.m in Sources */,
 				7DC2DDF61AAFC32700EE84B0 /* JHContatesViewController.m in Sources */,
-				7DC2DDFA1AAFE0EA00EE84B0 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +334,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC2DDCD1AAFC18D00EE84B0 /* Base */,
+				7D21197B1AB17F1100A1E9D9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -336,6 +343,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7DC2DDD21AAFC18D00EE84B0 /* Base */,
+				7D21197C1AB17F1100A1E9D9 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

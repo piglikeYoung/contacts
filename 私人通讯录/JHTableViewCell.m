@@ -54,7 +54,6 @@
     view.backgroundColor = [UIColor blackColor];
     view.alpha = 0.5;
     self.divider = view;
-    
     // 注意不要直接将子控件添加到cell中
     //    [self addSubview:view];
     

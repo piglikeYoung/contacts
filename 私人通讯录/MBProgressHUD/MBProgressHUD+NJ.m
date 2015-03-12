@@ -1,14 +1,13 @@
 //
-//  MBProgressHUD+JH.m
-//  私人通讯录
+//  MBProgressHUD+NJ.m
 //
-//  Created by piglikeyoung on 15/3/11.
-//  Copyright (c) 2015年 jinheng. All rights reserved.
+//  Created by 李南江 on 14-5-5.
+//  Copyright (c) 2014年 itcast. All rights reserved.
 //
 
-#import "MBProgressHUD+JH.h"
+#import "MBProgressHUD+NJ.h"
 
-@implementation MBProgressHUD(JH)
+@implementation MBProgressHUD (NJ)
 #pragma mark 显示信息
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view
 {
