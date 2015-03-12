@@ -9,6 +9,11 @@
 #import "JHLoginViewController.h"
 #import "MBProgressHUD+JH.h"
 
+#define NJAccount @"account"
+#define NJPwd @"pwd"
+#define NJRemPwd @"remPwd"
+#define NJAutoLogin @"autoLogin"
+
 @interface JHLoginViewController ()
 /**
  *  账号输入框
@@ -56,6 +61,33 @@
     [center addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.accountField];
     
     [center addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.pwdField];
+    
+    // 3. 回显数据(读取保存的偏好设置信息)
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    // 设置账号
+    self.accountField.text = [defaults objectForKey:NJAccount];
+    // 设置密码
+    // 判断是否需要记住密码
+    //    BOOL isSavePwd = [defaults boolForKey:NJRemPwd];
+    //    [self.remPwdSwitch setOn:isSavePwd animated:YES];
+    
+    [self.remPwdSwitch setOn:[defaults boolForKey:NJRemPwd] animated:YES];
+    
+    if (self.remPwdSwitch.isOn) {
+        self.pwdField.text = [defaults objectForKey:NJPwd];
+    }
+    
+    //    BOOL isAutoLogin = [defaults boolForKey:NJAutoLogin];
+    [self.autoLoginSwitch setOn:[defaults boolForKey:NJAutoLogin] animated:YES];
+    if (self.autoLoginSwitch.isOn) {
+        // 自动登录相当于调用登录方法
+        [self loginOnClick:nil];
+    }
+    
+    NSString *doc =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    
+    NSLog(@"%@",doc);
+
 }
 
 -(void)textChange
@@ -129,6 +161,15 @@
         [MBProgressHUD hideHUD];
         // 如果正确,跳转到联系人界面(手动执行segue)
         [self performSegueWithIdentifier:@"login2contatc" sender:nil];
+        
+        // 5.保存用户数据
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:self.accountField.text forKey:NJAccount];
+        [defaults setObject:self.pwdField.text forKey:NJPwd];
+        [defaults setBool:self.remPwdSwitch.isOn forKey:NJRemPwd];
+        [defaults setBool:self.autoLoginSwitch.isOn forKey:NJAutoLogin];
+        [defaults synchronize];
+
     });
 }
 
